@@ -14,7 +14,8 @@ CockroachDB database template 🪳
 ## 💡 About
 
 This repository contains a [`copier`](https://copier.readthedocs.io) template
-that can be used to create databases for
+that can be used to create
+[`CockroachDB`](https://www.cockroachlabs.com) databases for
 [`radio-aktywne`](https://github.com/radio-aktywne).
 
 ## 📜 Usage

@@ -1,0 +1,18 @@
+services:
+  {{ databasename }}:
+    build:
+      context: ./
+      network: host
+    environment:
+      - "{{ envprefix }}_HOST=${ {{- envprefix }}_HOST:-0.0.0.0}"
+      - "{{ envprefix }}_SQL_PORT=${ {{- envprefix }}_SQL_PORT:-{{ sqlport -}} }"
+      - "{{ envprefix }}_HTTP_PORT=${ {{- envprefix }}_HTTP_PORT:-{{ httpport -}} }"
+      - "{{ envprefix }}_RPC_PORT=${ {{- envprefix }}_RPC_PORT:-{{ rpcport -}} }"
+      - "{{ envprefix }}_ROOT_PASSWORD=${ {{- envprefix }}_ROOT_PASSWORD:-password}"
+      - "{{ envprefix }}_PASSWORD=${ {{- envprefix }}_PASSWORD:-password}"
+    network_mode: host
+    volumes:
+      - data:/database/data/
+
+volumes:
+  data: {}

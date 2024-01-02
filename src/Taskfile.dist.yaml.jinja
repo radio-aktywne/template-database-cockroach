@@ -133,7 +133,7 @@ tasks:
     cmds:
       - >
         ./src/start.sh
-        'Hello, world!'
+        {{ '{{ .CLI_ARGS }}' }}
   docker:
     desc: Run in docker container
     interactive: true

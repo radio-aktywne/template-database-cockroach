@@ -1,0 +1,27 @@
+---
+slug: /configuration
+title: Configuration
+---
+
+## Environment variables
+
+You can configure the database at runtime using various environment variables:
+
+- `{{ envprefix }}_HOST` -
+  host to listen for connections on
+  (default: `0.0.0.0`)
+- `{{ envprefix }}_SQL_PORT` -
+  port to listen for SQL connections on
+  (default: `{{ sqlport }}`)
+- `{{ envprefix }}_HTTP_PORT` -
+  port to listen for HTTP connections on
+  (default: `{{ httpport }}`)
+- `{{ envprefix }}_RPC_PORT` -
+  port to listen for RPC connections on
+  (default: `{{ rpcport }}`)
+- `{{ envprefix }}_ROOT_PASSWORD` -
+  password for the root user
+  (default: `password`)
+- `{{ envprefix }}_PASSWORD` -
+  password for the main user
+  (default: `password`)

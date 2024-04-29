@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Configuration
-host="${ {{- envprefix }}__HOST:-0.0.0.0}"
-sqlport="${ {{- envprefix }}__PORTS__SQL:-{{ sqlport -}} }"
-httpport="${ {{- envprefix }}__PORTS__HTTP:-{{ httpport -}} }"
-rpcport="${ {{- envprefix }}__PORTS__RPC:-{{ rpcport -}} }"
+host="${ {{- envprefix }}__SERVER__HOST:-0.0.0.0}"
+sqlport="${ {{- envprefix }}__SERVER__PORTS__SQL:-{{ sqlport -}} }"
+httpport="${ {{- envprefix }}__SERVER__PORTS__HTTP:-{{ httpport -}} }"
+rpcport="${ {{- envprefix }}__SERVER__PORTS__RPC:-{{ rpcport -}} }"
 
 retries=30
 interval=1

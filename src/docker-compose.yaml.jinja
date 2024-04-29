@@ -4,12 +4,12 @@ services:
       context: ./
       network: host
     environment:
-      - "{{ envprefix }}_HOST=${ {{- envprefix }}_HOST:-0.0.0.0}"
-      - "{{ envprefix }}_SQL_PORT=${ {{- envprefix }}_SQL_PORT:-{{ sqlport -}} }"
-      - "{{ envprefix }}_HTTP_PORT=${ {{- envprefix }}_HTTP_PORT:-{{ httpport -}} }"
-      - "{{ envprefix }}_RPC_PORT=${ {{- envprefix }}_RPC_PORT:-{{ rpcport -}} }"
-      - "{{ envprefix }}_ROOT_PASSWORD=${ {{- envprefix }}_ROOT_PASSWORD:-password}"
-      - "{{ envprefix }}_PASSWORD=${ {{- envprefix }}_PASSWORD:-password}"
+      - "{{ envprefix }}__HOST=${ {{- envprefix }}__HOST:-0.0.0.0}"
+      - "{{ envprefix }}__PORTS__SQL=${ {{- envprefix }}__PORTS__SQL:-{{ sqlport -}} }"
+      - "{{ envprefix }}__PORTS__HTTP=${ {{- envprefix }}__PORTS__HTTP:-{{ httpport -}} }"
+      - "{{ envprefix }}__PORTS__RPC=${ {{- envprefix }}__PORTS__RPC:-{{ rpcport -}} }"
+      - "{{ envprefix }}__CREDENTIALS__ROOT__PASSWORD=${ {{- envprefix }}__CREDENTIALS__ROOT__PASSWORD:-password}"
+      - "{{ envprefix }}__CREDENTIALS__USER__PASSWORD=${ {{- envprefix }}__CREDENTIALS__USER__PASSWORD:-password}"
     network_mode: host
     volumes:
       - data:/database/data/
